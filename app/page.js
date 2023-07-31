@@ -1,113 +1,84 @@
-import Image from 'next/image'
+import Quote from "@/app/Quote";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+        <section className="hero min-h-screen"
+                 style={{backgroundImage: 'url(/arbre_legendaire.jpg)'}}>
+            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-content text-center text-neutral-content">
+                <div className="max-w-md">
+                    <h1 className="mb-5 text-5xl font-bold">SEEDS FOR TREES</h1>
+                    <p className="mb-5">Un gest simple pour renouveler la nature, un arbre à la fois.</p>
+                    <button className="btn btn-outline rounded-full text-white border-white hover:text-primary hover:border-primary hover:bg-transparent ">Découvrir</button>
+                </div>
+            </div>
+        </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <section className={"py-5 md:py-10 md:px-10 lg:py-20 lg:px-32 w-full"}>
+            <div className={"flex flex-row w-full"}>
+                <img src={"/service1.jpg"} className={"w-1/3 md:pr-2"} alt={"Service 1"} />
+                <img src={"/service2.jpg"} className={"w-1/3 md:px-1"} alt={"Service 2"} />
+                <img src={"/service3.jpg"} className={"w-1/3 md:pl-2"} alt={"Service 3"} />
+            </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <div className="flex flex-col md:flex-row w-full gap-6 mt-10">
+                <h2 className={"text-2xl text-neutral-800 font-bold basis-1/3"}>Qui sommes nous ?</h2>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+                <div className={"basis-2/3 px-5"}>
+                    <p className={"text-neutral-500"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi eum ex hic ipsum laboriosam natus rem sapiente tempore temporibus? Ab, animi eos ipsum molestiae necessitatibus nemo perspiciatis provident totam.</p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+                    <div className="w-full text-center mt-5">
+                        <button className="btn btn-sm btn-primary">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <Quote bgUrl={'foret1.jpg'} text={'Nos actions sont les racines d\'un avenir durable, un héritage vert qui s\'épanouit à travers le temps'} />
+
+        <section className={"px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
+            <img src={"/service1.jpg"} className={"object-cover max-h-96"} alt={"Notre équipe"} />
+
+            <div className="w-full mt-10">
+                <h2 className={"text-2xl text-neutral-800 font-bold mb-5"}>Notre équipe</h2>
+
+                <div>
+                    <p className={"text-neutral-500"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi eum ex hic ipsum laboriosam natus rem sapiente tempore temporibus? Ab, animi eos ipsum molestiae necessitatibus nemo perspiciatis provident totam.</p>
+
+                    <div className="w-full text-center mt-5">
+                        <button className="btn btn-sm btn-primary">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Quote bgUrl={'foret5.jpg'} text={'Comme les gouttes d\'eau qui nourrissent la rivière, nos actions bienveillantes se répandent, créant un océan de changement'} />
+
+        <section className={"px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-20 xl:px-40 flex flex-col lg:flex-row lg:items-start w-full"}>
+            <div className={"w-full grid place-content-center lg:basis-1/3"}>
+                <img src={"/plantation1.jpg"} alt="Plantation" />
+            </div>
+
+            <div className="lg:basis-2/3 mt-5 lg:mt-0 lg:pl-5">
+                <h2 className={"text-2xl text-neutral-800 font-bold mb-5"}>Nos arbres et leur cycle de vie</h2>
+
+                <div className={"text-neutral-500 lg:basis-2/3"}>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aut consequatur dolor eius eveniet exercitationem explicabo facilis ipsum itaque laboriosam libero magni odio placeat qui repellendus, repudiandae sint ullam veritatis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aut consequatur dolor eius eveniet exercitationem explicabo facilis ipsum itaque laboriosam libero magni odio placeat qui repellendus, repudiandae sint ullam veritatis!</p>
+                </div>
+
+                <div className="w-full text-center mt-5">
+                    <button className="btn btn-sm btn-primary">En savoir plus</button>
+                </div>
+            </div>
+
+            <div className="w-full flex place-content-center lg:content-start my-5 lg:basis-1/3">
+                <img src="/cycle_arbre1.png" alt="Cycle de vie des arbres" className="basis-1/4 max-h-[120px] max-w-[120px]"/>
+            </div>
+        </section>
+
+        <Quote bgUrl={'foret2.jpg'} text={'Unissons nous pour un avenir plus sûr et durable'} />
+    </>
   )
 }
