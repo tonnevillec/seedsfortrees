@@ -17,9 +17,9 @@ export default function Home() {
 
         <section className={"py-5 md:py-10 md:px-10 lg:py-20 lg:px-32 w-full"}>
             <div className={"flex flex-row w-full"}>
-                <img src={"/service1.jpg"} className={"w-1/3 md:pr-2"} alt={"Service 1"} />
-                <img src={"/service2.jpg"} className={"w-1/3 md:px-1"} alt={"Service 2"} />
-                <img src={"/service3.jpg"} className={"w-1/3 md:pl-2"} alt={"Service 3"} />
+                <img src={"/foret6.jpg"} className={"w-1/3 md:pr-2"} alt={"Service 1"} />
+                <img src={"/foret7.jpg"} className={"w-1/3 md:px-1"} alt={"Service 2"} />
+                <img src={"/foret8.jpg"} className={"w-1/3 md:pl-2"} alt={"Service 3"} />
             </div>
 
             <div className="flex flex-col md:flex-row w-full gap-6 mt-10">
@@ -53,7 +53,7 @@ export default function Home() {
             </div>
         </section>
 
-        <Quote bgUrl={'foret5.jpg'} text={'Comme les gouttes d\'eau qui nourrissent la rivière, nos actions bienveillantes se répandent, créant un océan de changement'} />
+        <Quote bgUrl={'foret10.jpg'} text={'Comme les gouttes d\'eau qui nourrissent la rivière, nos actions bienveillantes se répandent, créant un océan de changement'} />
 
         <section className={"px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-20 xl:px-40 flex flex-col lg:flex-row lg:items-start w-full"}>
             <div className={"w-full grid place-content-center lg:basis-1/3"}>
