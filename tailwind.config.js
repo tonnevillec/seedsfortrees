@@ -12,7 +12,17 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["lemonade", "forest"],
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["[data-theme=lemonade]"],
+          "primary": "#95C1B7",
+          // "primary-focus": "mediumblue",
+          "info": "#2A5042"
+        },
+      },
+    ],
+    // themes: ["lemonade", "forest"],
     darkTheme: "forest",
     utils: true,
   },
