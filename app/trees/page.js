@@ -88,8 +88,8 @@ const Trees = () => {
                 <div className={"relative basis-2/3 w-full min-h-[750px]"}>
 
                     {currentCycle === 0 && <>
-                        <span className={"absolute top-[45px] left-[95px] text-sm text-neutral-400"}>Cliquez pour découvrir le cycle</span>
-                        <div className="absolute top-[73px] left-[170px] animate-bounce bg-white p-2 w-10 h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full flex items-center justify-center">
+                        <span className={"hidden min-[900px]:block absolute top-[45px] left-[95px] text-sm text-neutral-400"}>Cliquez pour découvrir le cycle</span>
+                        <div className="hidden min-[900px]:block absolute top-[73px] left-[170px] animate-bounce bg-white p-2 w-10 h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full flex items-center justify-center">
                             <svg className="w-6 h-6 text-primary" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                                 <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                             </svg>
