@@ -1,24 +1,15 @@
-// 'use client'
-
 import React from 'react';
 import Link from "next/link";
-import Image from "next/image";
 
 const Header = () => {
-
-    // const handleLocaleChange= () => {
-    //     console.log('En => Fr')
-    // }
 
     return (
         <div className="fixed top-0 left-0 right-0 navbar text-white px-20 glass z-[1030]">
             <div className="navbar-start">
                 <Link href={"/"}>
-                    <Image src={"/SEEDS-FOR-TREES_logo.png"}
-                           alt={"Seeds For trees logo"}
-                           width={160}
-                           height={170}
-                    />
+                    <img src={"/SEEDS-FOR-TREES_logo.png"}
+                         alt={"Logo de Seeds For Trees"}
+                         className={"w-[160px] h-[170px]"} />
                 </Link>
 
                 <div className="dropdown ms-20">
