@@ -1,4 +1,5 @@
 import Quote from "@/app/Quote";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,12 +11,12 @@ export default function Home() {
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">SEEDS FOR TREES</h1>
                     <p className="mb-5">Un gest simple pour renouveler la nature, un arbre à la fois.</p>
-                    <button className="btn btn-outline rounded-full text-white border-white hover:text-primary hover:border-primary hover:bg-transparent ">Découvrir</button>
+                    <Link href={"#showmore"} className="btn btn-outline rounded-full text-white border-white hover:text-primary hover:border-primary hover:bg-transparent ">Découvrir</Link>
                 </div>
             </div>
         </section>
 
-        <section className={"py-5 md:py-10 md:px-10 lg:py-20 lg:px-32 w-full"}>
+        <section className={"py-5 md:py-10 md:px-10 lg:py-20 lg:px-32 w-full"} id={"showmore"}>
             <div className={"flex flex-row w-full"}>
                 <img src={"/foret6.jpg"} className={"w-1/3 md:pr-2"} alt={"Service 1"} />
                 <img src={"/foret7.jpg"} className={"w-1/3 md:px-1"} alt={"Service 2"} />
@@ -29,7 +30,7 @@ export default function Home() {
                     <p className={"text-neutral-500"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi eum ex hic ipsum laboriosam natus rem sapiente tempore temporibus? Ab, animi eos ipsum molestiae necessitatibus nemo perspiciatis provident totam.</p>
 
                     <div className="w-full text-center mt-5">
-                        <button className="btn btn-sm btn-primary">En savoir plus</button>
+                        <Link className="btn btn-sm btn-primary" href={"/about"}>En savoir plus</Link>
                     </div>
                 </div>
             </div>
@@ -47,7 +48,7 @@ export default function Home() {
                     <p className={"text-neutral-500"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi eum ex hic ipsum laboriosam natus rem sapiente tempore temporibus? Ab, animi eos ipsum molestiae necessitatibus nemo perspiciatis provident totam.</p>
 
                     <div className="w-full text-center mt-5">
-                        <button className="btn btn-sm btn-primary">En savoir plus</button>
+                        <Link className="btn btn-sm btn-primary" href={"/team"}>En savoir plus</Link>
                     </div>
                 </div>
             </div>
@@ -69,7 +70,7 @@ export default function Home() {
                 </div>
 
                 <div className="w-full text-center mt-5">
-                    <button className="btn btn-sm btn-primary">En savoir plus</button>
+                    <Link className="btn btn-sm btn-primary" href={"/trees"}>En savoir plus</Link>
                 </div>
             </div>
 
