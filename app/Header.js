@@ -9,7 +9,8 @@ const Header = () => {
                 <Link href={"/"}>
                     <img src={"/SEEDS-FOR-TREES_logo.png"}
                          alt={"Logo de Seeds For Trees"}
-                         className={"w-[160px] h-[170px]"} />
+                         className={"hidden lg:block w-[160px] h-[170px]"} />
+                    <span className={"lg:hidden text-white hover:text-primary text-bold text-2xl"}>Seeds For Trees</span>
                 </Link>
 
                 <div className="dropdown ms-20">
@@ -22,13 +23,13 @@ const Header = () => {
                             <Link href={"/"}>Accueil</Link>
                         </li>
                         <li>
-                            <Link href={"/"}>Notre équipe</Link>
+                            <Link href={"/team"}>Notre équipe</Link>
                         </li>
                         <li>
-                            <Link href={"/"}>Nos arbres</Link>
+                            <Link href={"/trees"}>Nos arbres</Link>
                         </li>
                         <li>
-                            <Link href={"/"}>A propos</Link>
+                            <Link href={"/about"}>A propos</Link>
                         </li>
                     </ul>
                 </div>
