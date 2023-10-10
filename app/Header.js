@@ -1,16 +1,31 @@
-import React from 'react';
+'use client';
+
+import React, {useEffect, useState} from 'react';
 import Link from "next/link";
 
 const Header = () => {
+    const [scrollTop, setScrollTop] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = event => {
+            setScrollTop(window.scrollY > 400);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
 
     return (
-        <div className="fixed top-0 left-0 right-0 navbar text-white px-20 glass z-[1030]">
+        <div className={(scrollTop ? "bg-secondary text-white" : "text-white") + " fixed top-0 left-0 right-0 navbar px-20 glass z-[1030]"}>
             <div className="navbar-start">
-                <Link href={"/"}>
+                {/*<Link href={"/"} className={"rounded-full ring ring-info ring-offset-base-100 ring-offset-2 bg-info p-2"}>*/}
+                <Link href={"/"} className={""}>
                     <img src={"/SEEDS-FOR-TREES_logo.png"}
                          alt={"Logo de Seeds For Trees"}
-                         className={"hidden lg:block w-[160px] h-[170px]"} />
-                    <span className={"lg:hidden text-white hover:text-primary text-bold text-2xl"}>Seeds For Trees</span>
+                         className={(scrollTop ? "w-16 h-16" : "w-16 h-16 lg:w-32 lg:h-32")} />
                 </Link>
 
                 <div className="dropdown ms-20">
@@ -39,34 +54,34 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li>
                         <Link href={"/"}
-                              className={"hover:text-green-600 hover:bg-transparent"}
+                              className={"hover:text-primary hover:bg-transparent"}
                         >Accueil</Link>
                     </li>
                     <li>
                         <Link href={"/team"}
-                              className={"hover:text-green-600 hover:bg-transparent"}
+                              className={"hover:text-primary hover:bg-transparent"}
                         >Notre équipe</Link>
                     </li>
                     <li>
                         <Link href={"/trees"}
-                              className={"hover:text-green-600 hover:bg-transparent"}
+                              className={"hover:text-primary hover:bg-transparent"}
                         >Nos arbres</Link>
                     </li>
                     <li>
                         <Link href={"/about"}
-                              className={"hover:text-green-600 hover:bg-transparent"}
+                              className={"hover:text-primary hover:bg-transparent"}
                         >A propos</Link>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                {/*<input type="checkbox"*/}
-                {/*       className="toggle toggle-primary"*/}
-                {/*       onChange={handleLocaleChange}*/}
-                {/*       checked />*/}
-                <button className="btn btn-sm btn-outline btn-primary rounded-full">
-                    <span className={"opacity-50 hover:text-white hover:opacity-100"}>En</span> | <span className={"text-white"}>Fr</span>
-                </button>
+            {/*    /!*<input type="checkbox"*!/*/}
+            {/*    /!*       className="toggle toggle-primary"*!/*/}
+            {/*    /!*       onChange={handleLocaleChange}*!/*/}
+            {/*    /!*       checked />*!/*/}
+            {/*    <button className="btn btn-sm btn-outline btn-primary rounded-full">*/}
+            {/*        <span className={"opacity-50 hover:text-white hover:opacity-100"}>En</span> | <span className={"text-white"}>Fr</span>*/}
+            {/*    </button>*/}
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
     <>
-        <footer className="footer py-10 bg-base-200 text-base-content px-5 md:px-10 lg:px-20 xl:px-40">
+        <footer className="footer py-10 bg-base-300 text-base-content px-5 md:px-10 lg:px-20 xl:px-40">
             <div>
                 <img src={"/SEEDS-FOR-TREES_logo.png"}
                      alt={"Logo de Seeds For Trees"}
@@ -25,7 +25,7 @@ const Footer = () => {
                 <a className="link link-hover">Instagram</a>
             </div>
         </footer>
-        <footer className="footer footer-center p-4 bg-base-200 text-base-content">
+        <footer className="footer footer-center p-4 bg-secondary text-white">
             <div>
                 <p>Copyright © 2023 - All right reserved by Seeds For Trees</p>
             </div>
