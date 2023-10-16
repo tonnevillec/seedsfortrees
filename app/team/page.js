@@ -1,4 +1,14 @@
+'use client'
 import React from 'react';
+import LightGallery from 'lightgallery/react';
+
+// import styles
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+// import plugins if you need
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
 
 const Team = () => {
     return (
@@ -26,15 +36,41 @@ const Team = () => {
             </div>
 
             <section className={"pb-20 px-5 md:px-10 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
-                <div className={"grid grid-cols-1 sm:grid-cols-2 sm:gap-1 md:grid-cols-3 md:gap-2 w-full"}>
-                    <img src={"/service1.jpg"} className={"mb-3"} alt={"Service 1"} />
-                    <img src={"/service2.jpg"} className={"mb-3"} alt={"Service 2"} />
-                    <img src={"/service3.jpg"} className={"mb-3"} alt={"Service 3"} />
+                <LightGallery
+                    speed={500}
+                    plugins={[lgThumbnail, lgZoom]}
+                    elementClassNames={"grid grid-cols-1 sm:grid-cols-2 sm:gap-1 md:grid-cols-3 md:gap-2 w-full"}
+                >
+                    <a href="/service1.jpg" className={"mb-3"}>
+                        <img src={"/service1.jpg"} alt={"Service 1"} />
+                    </a>
+                    <a href="/service2.jpg" className={"mb-3"}>
+                        <img src={"/service2.jpg"} alt={"Service 2"} />
+                    </a>
+                    <a href="/service3.jpg" className={"mb-3"}>
+                        <img src={"/service3.jpg"} alt={"Service 3"} />
+                    </a>
 
-                    <img src={"/service1.jpg"} className={"mb-3"} alt={"Service 1"} />
-                    <img src={"/service2.jpg"} className={"mb-3"} alt={"Service 2"} />
-                    <img src={"/service3.jpg"} className={"mb-3"} alt={"Service 3"} />
-                </div>
+                    <a href="/service1.jpg" className={"mb-3"}>
+                        <img src={"/service1.jpg"} alt={"Service 1"} />
+                    </a>
+                    <a href="/service2.jpg" className={"mb-3"}>
+                        <img src={"/service2.jpg"} alt={"Service 2"} />
+                    </a>
+                    <a href="/service3.jpg" className={"mb-3"}>
+                        <img src={"/service3.jpg"} alt={"Service 3"} />
+                    </a>
+                </LightGallery>
+
+                {/*<div className={"grid grid-cols-1 sm:grid-cols-2 sm:gap-1 md:grid-cols-3 md:gap-2 w-full"}>*/}
+                {/*    <img src={"/service1.jpg"} className={"mb-3"} alt={"Service 1"} />*/}
+                {/*    <img src={"/service2.jpg"} className={"mb-3"} alt={"Service 2"} />*/}
+                {/*    <img src={"/service3.jpg"} className={"mb-3"} alt={"Service 3"} />*/}
+
+                {/*    <img src={"/service1.jpg"} className={"mb-3"} alt={"Service 1"} />*/}
+                {/*    <img src={"/service2.jpg"} className={"mb-3"} alt={"Service 2"} />*/}
+                {/*    <img src={"/service3.jpg"} className={"mb-3"} alt={"Service 3"} />*/}
+                {/*</div>*/}
             </section>
         </>
     );
