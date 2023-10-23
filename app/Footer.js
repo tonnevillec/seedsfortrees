@@ -1,28 +1,26 @@
 import React from 'react';
+import Link from "next/link";
 
 const Footer = () => {
     return (
     <>
-        <footer className="footer py-10 bg-base-300 text-base-content px-5 md:px-10 lg:px-20 xl:px-40">
+        <footer className="footer py-20 bg-base-300 text-base-content px-10 md:px-20 lg:px-40 xl:px-60">
+            {/*<div>*/}
+            {/*    <img src={"/SEEDS-FOR-TREES_logo.png"}*/}
+            {/*         alt={"Logo de Seeds For Trees"}*/}
+            {/*    />*/}
+            {/*</div>*/}
             <div>
-                <img src={"/SEEDS-FOR-TREES_logo.png"}
-                     alt={"Logo de Seeds For Trees"}
-                     className={""} />
+                <span className="footer-title">Useful links</span>
             </div>
             <div>
-                <span className="footer-title">Infos pratiques</span>
-                <a className="link link-hover">xxxxxxxxxxxx</a>
-                <a className="link link-hover">xxxxxxxxxxxx</a>
-                <a className="link link-hover">xxxxxxxxxxxx</a>
+                <Link href={"/terms"} className="link link-hover link-primary">Terms & Conditions</Link>
             </div>
             <div>
-                <span className="footer-title">A propos de ce site</span>
-                <a className="link link-hover">xxxxxxxxxxxx</a>
-                <a className="link link-hover">xxxxxxxxxxxx</a>
+                <Link href={"/privacy"} className="link link-hover link-primary">Privacy Policy</Link>
             </div>
             <div>
-                <span className="footer-title">Rejoignez-nous sur</span>
-                <a className="link link-hover">Instagram</a>
+                <Link href={"/faq"} className="link link-hover link-primary">FAQ</Link>
             </div>
         </footer>
         <footer className="footer footer-center p-4 bg-secondary text-white">

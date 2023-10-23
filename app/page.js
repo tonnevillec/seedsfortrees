@@ -21,95 +21,85 @@ export default function Home() {
             <div className="hero-content text-center text-base-100">
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">SEEDS FOR TREES</h1>
-                    <p className="mb-5">Un gest simple pour renouveler la nature, un arbre à la fois.</p>
-                    <Link href={"#showmore"} className="btn btn-outline rounded-full text-white border-white hover:text-primary hover:border-primary hover:bg-transparent">Découvrir</Link>
+                    <p className="mb-5">A simple gesture to renew nature, one tree at a time.</p>
+                    <Link href={"#showmore"} className="btn btn-outline rounded-full text-white border-white hover:text-primary hover:border-primary hover:bg-transparent">Discover</Link>
                 </div>
             </div>
         </section>
 
-        <section className={"py-5 md:py-10 md:px-10 lg:py-20 lg:px-32 w-full"} id={"showmore"}>
-            {/*<div className={"flex flex-row w-full"}>*/}
-                <LightGallery
-                    speed={500}
-                    plugins={[lgThumbnail, lgZoom]}
-                    elementClassNames={"flex flex-row w-full"}
-                >
-                    {/*<a href="/foret6.jpg" className={"w-1/4 md:pr-1"}>*/}
-                    {/*    <img alt="Service 1" src="/foret6.jpg" />*/}
-                    {/*</a>*/}
-                    <a href="/foret7.jpg" className={"w-1/3 md:pr-2"}>
-                        <img alt="Service 2" src="/foret7.jpg" />
-                    </a>
-                    <a href="/foret7.jpg" className={"w-1/3 md:px-1"}>
-                        <img alt="Service 2" src="/foret7.jpg" />
-                    </a>
-                    <a href="/foret8.jpg" className={"w-1/3 md:pl-2"}>
-                        <img alt="Service 3" src="/foret8.jpg" />
-                    </a>
-                </LightGallery>
-
-            {/*    <img src={"/foret6.jpg"} className={"w-1/3 md:pr-2"} alt={"Service 1"} />*/}
-            {/*    <img src={"/foret7.jpg"} className={"w-1/3 md:px-1"} alt={"Service 2"} />*/}
-            {/*    <img src={"/foret8.jpg"} className={"w-1/3 md:pl-2"} alt={"Service 3"} />*/}
-            {/*</div>*/}
+        <section className={"px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-48 xl:px-60 w-full"} id={"showmore"}>
+            <LightGallery
+                speed={500}
+                plugins={[lgThumbnail, lgZoom]}
+                elementClassNames={"flex flex-row w-full"}
+            >
+                <a href="/foret7.jpg" className={"w-1/3 md:pr-2"}>
+                    <img alt="Service 2" src="/foret7.jpg" />
+                </a>
+                <a href="/foret7.jpg" className={"w-1/3 md:px-1"}>
+                    <img alt="Service 2" src="/foret7.jpg" />
+                </a>
+                <a href="/foret8.jpg" className={"w-1/3 md:pl-2"}>
+                    <img alt="Service 3" src="/foret8.jpg" />
+                </a>
+            </LightGallery>
 
             <div className="flex flex-col md:flex-row w-full gap-6 mt-10">
-                <h2 className={"text-2xl text-neutral font-bold basis-1/3"}>Qui sommes nous ?</h2>
+                <div className={"basis-3/4"}>
+                    <h2 className={"text-2xl text-neutral font-bold mb-2"}>Who We Are and What We Do</h2>
 
-                <div className={"basis-2/3 px-5"}>
-                    <p className={"text-neutral-500"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi eum ex hic ipsum laboriosam natus rem sapiente tempore temporibus? Ab, animi eos ipsum molestiae necessitatibus nemo perspiciatis provident totam.</p>
+                    <p className={"text-neutral-500"}>
+                        Welcome to "Seeds for Trees," an initiative born from Denman Corporation's commitment to preserving our planet and combating climate change. In 2023, Denman Corporation proudly owns forests in North and South Carolina, where nature thrives, and trees are at the heart of our common mission.
+                    </p>
+                </div>
 
-                    <div className="w-full text-end mt-5">
-                        <Link className="btn btn-sm btn-info" href={"/about"}>En savoir plus</Link>
-                    </div>
+                <div className="w-full text-center mt-5 basis-1/4">
+                    <Link className="btn btn-info" href={"/about"}>Show more</Link>
                 </div>
             </div>
         </section>
 
-        <Quote bgUrl={'forest-3392077.png'} position={'bottom'} text={'Nos actions sont les racines d\'un avenir durable, un héritage vert qui s\'épanouit à travers le temps'} />
+        <Quote bgUrl={'forest-3392077.png'} position={'center'} text={'Our actions are the roots of a sustainable future, a green legacy that flourishes over time'} />
 
         <section className={"px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
-            <img src={"/service1.jpg"} className={"object-cover max-h-96"} alt={"Notre équipe"} />
+            <img src={"/service1.jpg"} className={"object-cover max-h-96"} alt={"Key Players in Our Mission"} />
 
-            <div className="w-full mt-10">
-                <h2 className={"text-2xl text-neutral font-bold mb-5"}>Notre équipe</h2>
+            <div className="flex flex-col md:flex-row w-full gap-6 mt-10">
+                <div className={"basis-3/4"}>
+                    <h2 className={"text-2xl text-neutral font-bold mb-2"}>Key Players in Our Mission</h2>
 
-                <div>
-                    <p className={"text-neutral-500"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi eum ex hic ipsum laboriosam natus rem sapiente tempore temporibus? Ab, animi eos ipsum molestiae necessitatibus nemo perspiciatis provident totam.</p>
+                    <p className={"text-neutral-500"}>
+                        At the core of our environmental mission is a dedicated team committed to nature preservation and sustainable forest management. Their daily work is essential to ensure that our trees contribute to environmental regeneration and carbon sequestration.
+                    </p>
+                </div>
 
-                    <div className="w-full text-end mt-5">
-                        <Link className="btn btn-sm btn-info" href={"/team"}>En savoir plus</Link>
-                    </div>
+                <div className="w-full text-center mt-5 basis-1/4">
+                    <Link className="btn btn-info" href={"/team"}>Show more</Link>
                 </div>
             </div>
         </section>
 
-        <Quote bgUrl={'foret10.jpg'} position={'bottom'} text={'Comme les gouttes d\'eau qui nourrissent la rivière, nos actions bienveillantes se répandent, créant un océan de changement'} />
+        <Quote bgUrl={'foret10.jpg'} position={'bottom'} text={'Like the drops of water that feed the river, our benevolent actions spread creating an ocean of change'} />
 
-        <section className={"px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-20 xl:px-40 flex flex-col lg:flex-row lg:items-start w-full"}>
+        <section className={"px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-48 xl:px-60 flex flex-col w-full lg:flex-row lg:items-start"}>
             <div className={"w-full grid place-content-center lg:basis-1/3"}>
                 <img src={"/plantation1.jpg"} alt="Plantation" />
             </div>
 
             <div className="lg:basis-2/3 mt-5 lg:mt-0 lg:pl-5">
-                <h2 className={"text-2xl text-neutral font-bold mb-5"}>Nos arbres et leur cycle de vie</h2>
+                <h2 className={"text-2xl text-neutral font-bold mb-5"}>Trees at the Heart of Our Action</h2>
 
                 <div className={"text-neutral-500 lg:basis-2/3"}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aut consequatur dolor eius eveniet exercitationem explicabo facilis ipsum itaque laboriosam libero magni odio placeat qui repellendus, repudiandae sint ullam veritatis!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aut consequatur dolor eius eveniet exercitationem explicabo facilis ipsum itaque laboriosam libero magni odio placeat qui repellendus, repudiandae sint ullam veritatis!</p>
+                    <p>In our forests, thousands of tons of Loblolly Pines and hardwoods thrive, silently capturing approximately 2.6 tons of CO² each year. They are the quiet guardians of our planet, playing a vital role in our environmental preservation mission.</p>
                 </div>
 
-                <div className="w-full text-center mt-5">
-                    <Link className="btn btn-sm btn-info" href={"/trees"}>En savoir plus</Link>
+                <div className="w-full text-center mt-9">
+                    <Link className="btn btn-info" href={"/trees"}>Show more</Link>
                 </div>
-            </div>
-
-            <div className="w-full flex place-content-center lg:content-start my-5 lg:basis-1/3">
-                <img src="/cycle_arbre1.png" alt="Cycle de vie des arbres" className="basis-1/4 max-h-[120px] max-w-[120px]"/>
             </div>
         </section>
 
-        <Quote bgUrl={'foret2.jpg'} text={'Unissons nous pour un avenir plus sûr et durable'} />
+        <Quote bgUrl={'foret2.jpg'} text={'Uniting for a safer, more sustainable future.'} />
     </>
   )
 }

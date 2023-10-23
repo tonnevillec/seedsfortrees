@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
     const [scrollTop, setScrollTop] = useState(false);
+    const [activeMenu, setActiveMenu] = useState('home');
 
     useEffect(() => {
         const handleScroll = event => {
@@ -18,6 +19,12 @@ const Header = () => {
         }
     }, []);
 
+    const handleClick = (e) => {
+        const currentTarget = e.currentTarget;
+        const {name} = currentTarget;
+        setActiveMenu(name);
+    }
+
     return (
         <div className={(scrollTop ? "bg-secondary text-white" : "text-white") + " fixed top-0 left-0 right-0 navbar px-20 glass z-[1030]"}>
             <div className="navbar-start">
@@ -25,7 +32,10 @@ const Header = () => {
                 <Link href={"/"} className={""}>
                     <img src={"/SEEDS-FOR-TREES_logo.png"}
                          alt={"Logo de Seeds For Trees"}
-                         className={(scrollTop ? "w-16 h-16" : "w-16 h-16 lg:w-32 lg:h-32")} />
+                         className={(scrollTop ? "w-16 h-16" : "w-16 h-16 lg:w-32 lg:h-32")}
+                         name={'home'}
+                         onClick={handleClick}
+                    />
                 </Link>
 
                 <div className="dropdown ms-20">
@@ -35,16 +45,16 @@ const Header = () => {
                     <ul tabIndex={0}
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 text-base-content rounded-box w-52">
                         <li>
-                            <Link href={"/"}>Accueil</Link>
+                            <Link href={"/"} name={'home'} onClick={handleClick}>Home</Link>
                         </li>
                         <li>
-                            <Link href={"/team"}>Notre équipe</Link>
+                            <Link href={"/team"} name={'team'} onClick={handleClick}>Our team</Link>
                         </li>
                         <li>
-                            <Link href={"/trees"}>Nos arbres</Link>
+                            <Link href={"/trees"} name={'trees'} onClick={handleClick}>Our trees</Link>
                         </li>
                         <li>
-                            <Link href={"/about"}>A propos</Link>
+                            <Link href={"/about"} name={'about'} onClick={handleClick}>About us</Link>
                         </li>
                     </ul>
                 </div>
@@ -54,23 +64,32 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li>
                         <Link href={"/"}
-                              className={"hover:text-primary hover:bg-transparent"}
-                        >Accueil</Link>
+                              className={`hover:text-primary hover:bg-transparent ${activeMenu === 'home' ? 'active' : ''}`}
+                              name={'home'}
+                              onClick={handleClick}
+                        >Home</Link>
                     </li>
                     <li>
                         <Link href={"/team"}
-                              className={"hover:text-primary hover:bg-transparent"}
-                        >Notre équipe</Link>
+                              className={`hover:text-primary hover:bg-transparent ${activeMenu === 'team' ? 'active' : ''}`}
+                              name={'team'}
+                              onClick={handleClick}
+                              onFocus={handleClick}
+                        >Our team</Link>
                     </li>
                     <li>
                         <Link href={"/trees"}
-                              className={"hover:text-primary hover:bg-transparent"}
-                        >Nos arbres</Link>
+                              className={`hover:text-primary hover:bg-transparent ${activeMenu === 'trees' ? 'active' : ''}`}
+                              name={'trees'}
+                              onClick={handleClick}
+                        >Our trees</Link>
                     </li>
                     <li>
                         <Link href={"/about"}
-                              className={"hover:text-primary hover:bg-transparent"}
-                        >A propos</Link>
+                              className={`hover:text-primary hover:bg-transparent ${activeMenu === 'about' ? 'active' : ''}`}
+                              name={'about'}
+                              onClick={handleClick}
+                        >About us</Link>
                     </li>
                 </ul>
             </div>

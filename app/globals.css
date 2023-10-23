@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+a.active {
+  background-color: #74B88B !important;
+  color: white !important;
+}
