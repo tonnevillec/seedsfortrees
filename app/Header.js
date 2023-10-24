@@ -26,7 +26,7 @@ const Header = () => {
     }
 
     return (
-        <div className={(scrollTop ? "bg-secondary text-white" : "text-white") + " fixed top-0 left-0 right-0 navbar px-20 glass z-[1030]"}>
+        <div className={(scrollTop ? "bg-info text-white" : "text-white") + " fixed top-0 left-0 right-0 navbar px-20 z-[1030]"}>
             <div className="navbar-start">
                 {/*<Link href={"/"} className={"rounded-full ring ring-info ring-offset-base-100 ring-offset-2 bg-info p-2"}>*/}
                 <Link href={"/"} className={""}>
@@ -64,14 +64,14 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li>
                         <Link href={"/"}
-                              className={`hover:text-primary hover:bg-transparent ${activeMenu === 'home' ? 'active' : ''}`}
+                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'home' ? 'active' : ''}`}
                               name={'home'}
                               onClick={handleClick}
                         >Home</Link>
                     </li>
                     <li>
                         <Link href={"/team"}
-                              className={`hover:text-primary hover:bg-transparent ${activeMenu === 'team' ? 'active' : ''}`}
+                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'team' ? 'active' : ''}`}
                               name={'team'}
                               onClick={handleClick}
                               onFocus={handleClick}
@@ -79,14 +79,14 @@ const Header = () => {
                     </li>
                     <li>
                         <Link href={"/trees"}
-                              className={`hover:text-primary hover:bg-transparent ${activeMenu === 'trees' ? 'active' : ''}`}
+                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'trees' ? 'active' : ''}`}
                               name={'trees'}
                               onClick={handleClick}
                         >Our trees</Link>
                     </li>
                     <li>
                         <Link href={"/about"}
-                              className={`hover:text-primary hover:bg-transparent ${activeMenu === 'about' ? 'active' : ''}`}
+                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'about' ? 'active' : ''}`}
                               name={'about'}
                               onClick={handleClick}
                         >About us</Link>

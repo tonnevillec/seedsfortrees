@@ -14,16 +14,16 @@ const Footer = () => {
                 <span className="footer-title">Useful links</span>
             </div>
             <div>
-                <Link href={"/terms"} className="link link-hover link-primary">Terms & Conditions</Link>
+                <Link href={"/terms"} className="link link-hover link-secondary">Terms & Conditions</Link>
             </div>
             <div>
-                <Link href={"/privacy"} className="link link-hover link-primary">Privacy Policy</Link>
+                <Link href={"/privacy"} className="link link-hover link-secondary">Privacy Policy</Link>
             </div>
             <div>
-                <Link href={"/faq"} className="link link-hover link-primary">FAQ</Link>
+                <Link href={"/faq"} className="link link-hover link-secondary">FAQ</Link>
             </div>
         </footer>
-        <footer className="footer footer-center p-4 bg-secondary text-white">
+        <footer className="footer footer-center p-4 bg-info text-white">
             <div>
                 <p>Copyright © 2023 - All right reserved by Seeds For Trees</p>
             </div>
