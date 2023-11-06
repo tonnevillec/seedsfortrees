@@ -26,9 +26,8 @@ const Header = () => {
     }
 
     return (
-        <div className={(scrollTop ? "bg-info text-white" : "text-white") + " fixed top-0 left-0 right-0 navbar px-20 z-[1030]"}>
+        <div className={(scrollTop ? "bg-info text-white" : "text-white") + " fixed top-0 left-0 right-0 navbar px-5 md:px-20 z-[1030]"}>
             <div className="navbar-start">
-                {/*<Link href={"/"} className={"rounded-full ring ring-info ring-offset-base-100 ring-offset-2 bg-info p-2"}>*/}
                 <Link href={"/"} className={""}>
                     <img src={"/SEEDS-FOR-TREES_logo.png"}
                          alt={"Logo de Seeds For Trees"}
@@ -38,7 +37,7 @@ const Header = () => {
                     />
                 </Link>
 
-                <div className="dropdown ms-20">
+                <div className="dropdown ms-5">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
@@ -60,7 +59,7 @@ const Header = () => {
                 </div>
             </div>
 
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li>
                         <Link href={"/"}
@@ -92,15 +91,6 @@ const Header = () => {
                         >About us</Link>
                     </li>
                 </ul>
-            </div>
-            <div className="navbar-end">
-            {/*    /!*<input type="checkbox"*!/*/}
-            {/*    /!*       className="toggle toggle-primary"*!/*/}
-            {/*    /!*       onChange={handleLocaleChange}*!/*/}
-            {/*    /!*       checked />*!/*/}
-            {/*    <button className="btn btn-sm btn-outline btn-primary rounded-full">*/}
-            {/*        <span className={"opacity-50 hover:text-white hover:opacity-100"}>En</span> | <span className={"text-white"}>Fr</span>*/}
-            {/*    </button>*/}
             </div>
         </div>
     );

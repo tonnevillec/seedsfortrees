@@ -13,8 +13,8 @@ import lgZoom from 'lightgallery/plugins/zoom';
 const Team = () => {
     return (
         <>
-            <section className="hero h-[500px]"
-                     style={{backgroundImage: 'url(https://picsum.photos/id/786/4288/2848.jpg)'}}>
+            <section className="hero h-[600px]"
+                     style={{backgroundImage: 'url(/TEAM/TEAM01.png)'}}>
             </section>
 
             <section className={"bg-white px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
@@ -34,11 +34,11 @@ const Team = () => {
                     </div>
                 </div>
 
-                <img src={"/service1.jpg"} className={"object-cover max-h-96"} alt={"Our team"} />
+                <img src={"/TEAM/TEAM02.png"} className={"object-cover"} alt={"Our team"} />
             </section>
 
-            <section className={"bg-white px-5 pt-0 pb-7 md:pb-10 md:px-10 lg:pb-15 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
-                <div className="w-full mb-10">
+            <section className={"bg-white px-5 pt-0 pb-10 md:pb-10 md:px-10 lg:pb-15 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
+                <div className="w-full">
                     <h1 className={"text-3xl text-primary font-bold mb-5 text-center"}>Nature's stewards</h1>
 
                     <div>
@@ -60,26 +60,40 @@ const Team = () => {
                 <LightGallery
                     speed={500}
                     plugins={[lgThumbnail, lgZoom]}
-                    elementClassNames={"grid grid-cols-1 sm:grid-cols-2 sm:gap-1 md:grid-cols-3 md:gap-2 w-full"}
+                    elementClassNames={"grid grid-cols-2 sm:grid-cols-4 gap-1 md:grid-cols-5 w-full"}
                 >
-                    <a href="/service1.jpg" className={"mb-3"}>
-                        <img src={"/service1.jpg"} alt={"Service 1"} />
+                    <a href="/TEAM/Galerie/01.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/01.jpg"} alt={""} />
                     </a>
-                    <a href="/service2.jpg" className={"mb-3"}>
-                        <img src={"/service2.jpg"} alt={"Service 2"} />
+                    <a href="/TEAM/Galerie/02.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/02.jpg"} alt={""} />
                     </a>
-                    <a href="/service3.jpg" className={"mb-3"}>
-                        <img src={"/service3.jpg"} alt={"Service 3"} />
+                    <a href="/TEAM/Galerie/11.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/11.jpg"} alt={""} />
                     </a>
-
-                    <a href="/service1.jpg" className={"mb-3"}>
-                        <img src={"/service1.jpg"} alt={"Service 1"} />
+                    <a href="/TEAM/Galerie/04.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/04.jpg"} alt={""} />
                     </a>
-                    <a href="/service2.jpg" className={"mb-3"}>
-                        <img src={"/service2.jpg"} alt={"Service 2"} />
+                    <a href="/TEAM/Galerie/05.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/05.jpg"} alt={""} />
                     </a>
-                    <a href="/service3.jpg" className={"mb-3"}>
-                        <img src={"/service3.jpg"} alt={"Service 3"} />
+                    <a href="/TEAM/Galerie/06.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/06.jpg"} alt={""} />
+                    </a>
+                    <a href="/TEAM/Galerie/07.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/07.jpg"} alt={""} />
+                    </a>
+                    <a href="/TEAM/Galerie/08.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/08.jpg"} alt={""} />
+                    </a>
+                    <a href="/TEAM/Galerie/09.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/09.jpg"} alt={""} />
+                    </a>
+                    <a href="/TEAM/Galerie/10.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/10.jpg"} alt={""} />
+                    </a>
+                    <a href="/TEAM/Galerie/03.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/03.jpg"} alt={""} />
                     </a>
                 </LightGallery>
             </section>
