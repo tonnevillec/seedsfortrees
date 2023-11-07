@@ -17,7 +17,7 @@ const Trees = () => {
                         <img src="/TREES/TREES03.png" alt="A Loblolly Pine Legacy" />
                     </div>
 
-                    <div>
+                    <div className={"text-neutral-500"}>
                         <h1 className={"text-3xl text-primary font-bold mb-5"}>Seeds for Trees : A Loblolly Pine Legacy</h1>
 
                         <h2 className={"text-2xl text-primary font-bold mb-5"}>Ecological Diversity</h2>
@@ -31,22 +31,22 @@ const Trees = () => {
                         </p>
 
                         <h3 className={"text-base font-bold"}>Carbon Sequestration:</h3>
-                        <p className={"text-justify pl-10 mb-5"}>
+                        <p className={"text-justify mb-5"}>
                             Loblolly Pines are excellent carbon sequesters. They absorb carbon dioxide (CO²) from the atmosphere during their growth, thus storing carbon in their wood. This helps reduce the CO² concentration in the atmosphere, contributing to the fight against climate change.
                         </p>
 
                         <h3 className={"text-base font-bold"}>Sustainable Timber:</h3>
-                        <p className={"text-justify pl-10 mb-5"}>
+                        <p className={"text-justify mb-5"}>
                             Loblolly Pines provide high-quality wood widely used in the construction and woodworking industry. Sustainable management of these trees ensures a continuous supply of timber while preserving forest ecosystems.
                         </p>
 
                         <h3 className={"text-base font-bold"}>Habitat for Wildlife:</h3>
-                        <p className={"text-justify pl-10 mb-5"}>
+                        <p className={"text-justify mb-5"}>
                             Loblolly Pine forests shelter a wide variety of plant and animal species, providing vital habitat for numerous wild animals. Preserving these forests contributes to maintaining regional biodiversity.
                         </p>
 
                         <h3 className={"text-base font-bold"}>Local Climate Regulation:</h3>
-                        <p className={"text-justify pl-10 mb-5"}>
+                        <p className={"text-justify mb-5"}>
                             Loblolly Pine forests play a role in regulating local climate. They help maintain appropriate temperature and humidity conditions, positively impacting local weather patterns and precipitation. Whilst the majority of our trees are oblolly Pines grown for commercial timber, this does not mean they lack significant ecological benefits. The seedlings we plant grow much faster and straighter than traditional pines, allowing a larger proportion of the harvest to be used for timber and utility poles production, ensuring long-term sustainable management as carbon sinks. Each individual tree also sequesters 40% more carbon than a standard pine.
                         </p>
 

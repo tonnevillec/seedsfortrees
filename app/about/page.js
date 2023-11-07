@@ -19,7 +19,7 @@ const About = () => {
                         <div className="lg:basis-1/2 lg:mb-0 lg:pr-5">
                             <h2 className={"text-2xl text-primary font-bold mb-5"}>Key Figures</h2>
 
-                            <ul className={"text-xl list-disc pl-5"}>
+                            <ul className={"list-disc pl-5"}>
                                 <li className={"mb-5 text-justify"}>In 2023, our forests house <span className={"text-primary text-2xl text-bold"}>31,000</span> tons of Loblolly Pines and <span className={"text-primary text-2xl text-bold"}>15,000</span> tons of hardwood, including Gum Trees, creating a diverse and vital ecosystem.</li>
                                 <li className={"mb-5 text-justify"}>Over the past six years, we have planted <span className={"text-primary text-2xl text-bold"}>315,000</span> trees, strengthening our commitment to the environment.</li>
                                 <li className={"mb-5 text-justify"}>To date, our forest hosts approximately <span className={"text-primary text-2xl text-bold"}>410,000</span> trees, a precious resource for the planet and the life it sustains.</li>
@@ -42,7 +42,7 @@ const About = () => {
 
             <section className={"bg-white px-5 pb-10 md:px-10 lg:px-48 xl:px-60 flex flex-col lg:flex-row lg:items-start w-full"}>
                 <div className="lg:basis-2/3 mb-5 lg:mb-0 lg:pr-5">
-                    <h2 className={"text-2xl text-primary font-bold mb-2"}>Our Mission</h2>
+                    <h2 className={"text-2xl text-primary font-bold mb-5"}>Our Mission</h2>
 
                     <div>
                         <p className={"text-justify mb-5"}>Our mission is simple but essential.

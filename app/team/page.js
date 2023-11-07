@@ -62,8 +62,8 @@ const Team = () => {
                     plugins={[lgThumbnail, lgZoom]}
                     elementClassNames={"grid grid-cols-2 sm:grid-cols-4 gap-1 md:grid-cols-5 w-full"}
                 >
-                    <a href="/TEAM/Galerie/01.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/01.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/03.jpg" className={"mb-3"}>
+                        <img src={"/TEAM/Galerie/03.jpg"} alt={""} />
                     </a>
                     <a href="/TEAM/Galerie/02.jpg" className={"mb-3"}>
                         <img src={"/TEAM/Galerie/02.jpg"} alt={""} />
@@ -91,9 +91,6 @@ const Team = () => {
                     </a>
                     <a href="/TEAM/Galerie/10.jpg" className={"mb-3"}>
                         <img src={"/TEAM/Galerie/10.jpg"} alt={""} />
-                    </a>
-                    <a href="/TEAM/Galerie/03.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/03.jpg"} alt={""} />
                     </a>
                 </LightGallery>
             </section>
