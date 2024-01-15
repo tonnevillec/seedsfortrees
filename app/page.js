@@ -1,71 +1,74 @@
 'use client'
-import Quote from "@/app/Quote";
-import Link from "next/link";
-import LightGallery from 'lightgallery/react';
 
-// import styles
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
-// import plugins if you need
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
+import Link from "next/link";
+
 import Citations from "@/app/Citations";
-import React from "react";
+import React, {useState} from "react";
+
+import ReactModal from 'react-modal';
+
+ReactModal.setAppElement('#ReactModalPortal');
 
 export default function Home() {
+    const [showModal, setShowModal] = useState(false);
+    const [currentImg, setCurrentImg] = useState('');
+
+    const handleOpenModal = (e) => {
+        e.preventDefault();
+        setCurrentImg(e.currentTarget.dataset.target);
+        setShowModal(true);
+    }
+
+    const handleCloseModal = () => {
+        setCurrentImg('');
+        setShowModal(false);
+    }
 
   return (
     <>
-
-        {/*<section id={"video-fond hero min-h-screen"}>*/}
-        {/*    <video autoPlay={true} loop={true} controls={false} muted={true}>*/}
-        {/*        <source src="/HOME/HOME.mp4" type="video/mp4" />*/}
-        {/*    </video>*/}
-        {/*</section>*/}
-
-        {/*<section className="hero min-h-screen"*/}
-        {/*         style={{backgroundImage: 'url(/HOME/HOME.gif)'}}>*/}
-        {/*    <div className="hero-overlay bg-opacity-60"></div>*/}
-        {/*    <div className="hero-content text-center text-base-100">*/}
-        {/*        <div className="max-w-md">*/}
-        {/*            <h1 className="mb-5 text-5xl font-bold">SEEDS FOR TREES</h1>*/}
-        {/*            <p className="mb-5">A simple gesture to renew nature, one tree at a time.</p>*/}
-        {/*            <Link href={"#showmore"} className="btn btn-outline rounded-full text-white border-white hover:text-primary hover:border-primary hover:bg-transparent">Discover</Link>*/}
-        {/*        </div>*/}
-        {/*    </div>*/}
-        {/*</section>*/}
-
-        <section className="hero min-h-screen"
-                 style={{backgroundImage: 'url(/forest-1867975.png)'}}>
-            <div className="hero-overlay bg-opacity-30"></div>
-            <div className="hero-content text-center text-base-100">
-                <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold">SEEDS FOR TREES</h1>
-                    <p className="mb-5">A simple gesture to renew nature, one tree at a time.</p>
-                    <Link href={"#showmore"} className="btn btn-outline rounded-full text-white border-white hover:text-primary hover:border-primary hover:bg-transparent">Discover</Link>
-                </div>
+        <section id={"video-hero"}>
+            <video autoPlay={true} loop={true} controls={false} muted={true} preload={"auto"}>
+                <source src="/HOME/HOME_2.mp4" type="video/mp4" />
+            </video>
+            <div className={"caption"}>
+                <h1 className="mb-5 text-5xl font-bold">SEEDS FOR TREES</h1>
+                <p className="mb-5">A simple gesture to renew nature, one tree at a time.</p>
+                <Link href={"#showmore"} className="btn btn-outline rounded-full text-white border-white hover:text-primary hover:border-primary hover:bg-transparent">Discover</Link>
             </div>
         </section>
 
         <section className={"px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-48 xl:px-60 w-full"} id={"showmore"}>
-            <LightGallery
-                speed={500}
-                plugins={[lgThumbnail, lgZoom]}
-                elementClassNames={"flex flex-row w-full"}
-            >
-                <a href="/HOME/HOME01.png" className={"w-1/3 md:pr-2"}>
-                    <img alt="Service 2" src="/HOME/HOME01.png" />
+            <div className={"grid md:grid-cols-3 gap-1 w-full"} id={"ReactModalPortal"}>
+                <a href="/HOME/HOME01.png" className={"md:pr-2"} onClick={handleOpenModal} data-target={"/HOME/HOME01.png"}>
+                    <img alt="" src="/HOME/HOME01.png" />
                 </a>
-                <a href="/HOME/HOME02.png" className={"w-1/3 md:px-1"}>
-                    <img alt="Service 2" src="/HOME/HOME02.png" />
+                <a href="/HOME/HOME02.png" className={"md:px-1"} onClick={handleOpenModal} data-target={"/HOME/HOME02.png"}>
+                    <img alt="" src="/HOME/HOME02.png" />
                 </a>
-                <a href="/HOME/HOME03.png" className={"w-1/3 md:pl-2"}>
-                    <img alt="Service 3" src="/HOME/HOME03.png" />
+                <a href="/HOME/HOME03.png" className={"md:pl-2"} onClick={handleOpenModal} data-target={"/HOME/HOME03.png"}>
+                    <img alt="" src="/HOME/HOME03.png" />
                 </a>
-            </LightGallery>
 
-            <h2 className={"text-2xl text-primary font-bold mb-5 mt-10"}>Who We Are and What We Do</h2>
+                <ReactModal
+                    isOpen={showModal}
+                    contentLabel=""
+                    style={{ position: 'absolute'}}
+                >
+                    <h2 className={"w-full text-end mb-2"}>
+                        <button onClick={handleCloseModal} className={"btn btn-ghost btn-sm"}>[X] Close</button>
+                    </h2>
+
+                    <img alt="" src={currentImg} />
+
+                    <div className={"grid grid-cols-3 justify-center gap-1 mt-3"}>
+                        <img alt="" src="/HOME/HOME01.png" onClick={() => setCurrentImg("/HOME/HOME01.png")} style={{ cursor: 'pointer' }} />
+                        <img alt="" src="/HOME/HOME02.png" onClick={() => setCurrentImg("/HOME/HOME02.png")} style={{ cursor: 'pointer' }} />
+                        <img alt="" src="/HOME/HOME03.png" onClick={() => setCurrentImg("/HOME/HOME03.png")} style={{ cursor: 'pointer' }} />
+                    </div>
+                </ReactModal>
+            </div>
+
+            <h2 className={"text-2xl text-primary font-bold mb-5 mt-10"}>Who we are and what we do</h2>
 
             <div className="flex flex-col md:flex-row w-full gap-5">
                 <div className={"basis-3/4"}>

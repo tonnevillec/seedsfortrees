@@ -1,16 +1,24 @@
 'use client'
-import React from 'react';
-import LightGallery from 'lightgallery/react';
+import React, {useState} from 'react';
 
-// import styles
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
-// import plugins if you need
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
+import ReactModal from "react-modal";
+ReactModal.setAppElement('#ReactModalPortal');
 
 const Team = () => {
+    const [showModal, setShowModal] = useState(false);
+    const [currentImg, setCurrentImg] = useState('');
+
+    const handleOpenModal = (e) => {
+        e.preventDefault();
+        setCurrentImg(e.currentTarget.dataset.target);
+        setShowModal(true);
+    }
+
+    const handleCloseModal = () => {
+        setCurrentImg('');
+        setShowModal(false);
+    }
+
     return (
         <>
             <section className="hero h-[600px]"
@@ -19,7 +27,7 @@ const Team = () => {
 
             <section className={"bg-white px-5 py-10 md:py-15 md:px-10 lg:py-20 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
                 <div className="w-full mb-10">
-                    <h1 className={"text-3xl text-primary font-bold mb-5 text-center"}>We aim to make a difference</h1>
+                    <h1 className={"text-3xl text-primary font-bold mb-5 text-left"}>We aim to make a difference</h1>
 
                     <div>
                         <p className={"text-neutral-500 text-justify"}>
@@ -39,7 +47,7 @@ const Team = () => {
 
             <section className={"bg-white px-5 pt-0 pb-10 md:pb-10 md:px-10 lg:pb-15 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
                 <div className="w-full">
-                    <h1 className={"text-3xl text-primary font-bold mb-5 text-center"}>Nature's stewards</h1>
+                    <h1 className={"text-3xl text-primary font-bold mb-5 text-left"}>Nature's stewards</h1>
 
                     <div>
                         <p className={"text-neutral-500 text-justify"}>
@@ -57,42 +65,63 @@ const Team = () => {
             </section>
 
             <section className={"pb-20 px-5 md:px-10 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
-                <LightGallery
-                    speed={500}
-                    plugins={[lgThumbnail, lgZoom]}
-                    elementClassNames={"grid grid-cols-2 sm:grid-cols-4 gap-1 md:grid-cols-5 w-full"}
-                >
-                    <a href="/TEAM/Galerie/03.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/03.jpg"} alt={""} />
+                <div className={"grid grid-cols-2 sm:grid-cols-4 gap-1 md:grid-cols-5 w-full"} id={"ReactModalPortal"}>
+                    <a href="/TEAM/Galerie/03.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/03.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/03.jpg"} alt={""}/>
                     </a>
-                    <a href="/TEAM/Galerie/02.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/02.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/02.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/02.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/02.jpg"} alt={""}/>
                     </a>
-                    <a href="/TEAM/Galerie/11.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/11.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/11.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/11.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/11.jpg"} alt={""}/>
                     </a>
-                    <a href="/TEAM/Galerie/04.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/04.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/04.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/04.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/04.jpg"} alt={""}/>
                     </a>
-                    <a href="/TEAM/Galerie/05.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/05.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/05.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/05.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/05.jpg"} alt={""}/>
                     </a>
-                    <a href="/TEAM/Galerie/06.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/06.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/06.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/06.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/06.jpg"} alt={""}/>
                     </a>
-                    <a href="/TEAM/Galerie/07.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/07.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/07.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/07.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/07.jpg"} alt={""}/>
                     </a>
-                    <a href="/TEAM/Galerie/08.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/08.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/08.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/08.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/08.jpg"} alt={""}/>
                     </a>
-                    <a href="/TEAM/Galerie/09.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/09.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/09.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/09.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/09.jpg"} alt={""}/>
                     </a>
-                    <a href="/TEAM/Galerie/10.jpg" className={"mb-3"}>
-                        <img src={"/TEAM/Galerie/10.jpg"} alt={""} />
+                    <a href="/TEAM/Galerie/10.jpg" className={"mb-3"} data-target={"/TEAM/Galerie/10.jpg"}  onClick={handleOpenModal}>
+                        <img src={"/TEAM/Galerie/10.jpg"} alt={""}/>
                     </a>
-                </LightGallery>
+
+                    <ReactModal
+                        isOpen={showModal}
+                        contentLabel=""
+                        style={{position: 'absolute'}}
+                    >
+                        <h2 className={"w-full text-end mb-2"}>
+                            <button onClick={handleCloseModal} className={"btn btn-ghost btn-sm"}>[X] Close</button>
+                        </h2>
+
+                        <img alt="Service 2" src={currentImg}/>
+
+                        <div className={"grid grid-cols-5 md:grid-cols-10 justify-center gap-1 mt-3"}>
+                            <img alt="" src="/TEAM/Galerie/03.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/03.jpg")} style={{ cursor: 'pointer' }} />
+                            <img alt="" src="/TEAM/Galerie/02.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/02.jpg")} style={{ cursor: 'pointer' }} />
+                            <img alt="" src="/TEAM/Galerie/11.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/11.jpg")} style={{ cursor: 'pointer' }} />
+                            <img alt="" src="/TEAM/Galerie/04.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/04.jpg")} style={{ cursor: 'pointer' }} />
+                            <img alt="" src="/TEAM/Galerie/05.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/05.jpg")} style={{ cursor: 'pointer' }} />
+                            <img alt="" src="/TEAM/Galerie/06.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/06.jpg")} style={{ cursor: 'pointer' }} />
+                            <img alt="" src="/TEAM/Galerie/07.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/07.jpg")} style={{ cursor: 'pointer' }} />
+                            <img alt="" src="/TEAM/Galerie/08.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/08.jpg")} style={{ cursor: 'pointer' }} />
+                            <img alt="" src="/TEAM/Galerie/09.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/09.jpg")} style={{ cursor: 'pointer' }} />
+                            <img alt="" src="/TEAM/Galerie/10.jpg" onClick={() => setCurrentImg("/TEAM/Galerie/10.jpg")} style={{ cursor: 'pointer' }} />
+                        </div>
+                    </ReactModal>
+                </div>
             </section>
         </>
     );

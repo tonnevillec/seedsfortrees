@@ -2,10 +2,13 @@
 
 import React, {useEffect, useState} from 'react';
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
     const [scrollTop, setScrollTop] = useState(false);
     const [activeMenu, setActiveMenu] = useState('home');
+    const pathname = usePathname();
+    console.log(pathname)
 
     useEffect(() => {
         const handleScroll = event => {
@@ -42,14 +45,14 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1 hidden lg:flex">
                     <li>
                         <Link href={"/"}
-                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'home' ? 'active' : ''}`}
+                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'home' && pathname === '/' ? 'active' : ''}`}
                               name={'home'}
                               onClick={handleClick}
                         >Home</Link>
                     </li>
                     <li>
                         <Link href={"/team"}
-                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'team' ? 'active' : ''}`}
+                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'team' || pathname === '/team' ? 'active' : ''}`}
                               name={'team'}
                               onClick={handleClick}
                               onFocus={handleClick}
@@ -57,14 +60,14 @@ const Header = () => {
                     </li>
                     <li>
                         <Link href={"/trees"}
-                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'trees' ? 'active' : ''}`}
+                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'trees' || pathname === '/trees' ? 'active' : ''}`}
                               name={'trees'}
                               onClick={handleClick}
                         >Our trees</Link>
                     </li>
                     <li>
                         <Link href={"/about"}
-                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'about' ? 'active' : ''}`}
+                              className={`text-white hover:text-primary hover:bg-transparent ${activeMenu === 'about' || pathname === '/about' ? 'active' : ''}`}
                               name={'about'}
                               onClick={handleClick}
                         >About us</Link>

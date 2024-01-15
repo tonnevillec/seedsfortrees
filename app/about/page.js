@@ -9,7 +9,7 @@ const About = () => {
 
             <section className={"bg-white px-5 py-10 md:py-15 md:px-10 lg:py-15 lg:px-48 xl:px-60 flex flex-col w-full justify-center"}>
                 <div className="w-full">
-                    <h1 className={"text-3xl text-primary font-bold mb-5 text-center"}>Who We Are ?</h1>
+                    <h1 className={"text-3xl text-primary font-bold mb-5 text-left"}>Who we are ?</h1>
 
                     <p className={"mb-8 text-justify"}>
                         Welcome to the world of Denman Corporation, where our commitment to preserving our planet and combating climate change comes to life under the banner "Seeds for Trees." In 2023, we are proud to own 1,439 acres of forest in North and South Carolina, where nature thrives, and trees are at the heart of our mission.

@@ -16,7 +16,7 @@ const Faq = () => {
                         We select Loblolly Pine for several reasons :
                     </p>
 
-                    <ul className={"text-xl list-disc pl-5 mb-5"}>
+                    <ul className={"list-disc pl-5 mb-5"}>
                         <li className={"mb-2 text-justify"}>It suits the climate in North and South Carolina.</li>
                         <li className={"mb-2 text-justify"}>It thrives in our soil type.</li>
                         <li className={"mb-2 text-justify"}>It is more disease-resistant than other pine species.</li>
@@ -28,7 +28,7 @@ const Faq = () => {
 
                     <h2 className={"text-2xl text-primary font-bold mb-2"}>What Are the Trees Used For?</h2>
 
-                    <ul className={"text-xl list-disc pl-5 mb-5"}>
+                    <ul className={"list-disc pl-5 mb-5"}>
                         <li className={"mb-2 text-justify"}>The use of trees varies depending on their age:</li>
                         <li className={"mb-2 text-justify"}>
                             At 10 years, the wood is processed into Medium Density Fiberboard (MDF), which is used for furniture like cabinets, shelves, tables, chairs, dressers, as well as for construction materials like wall panels, skirting, and architraves.
@@ -43,7 +43,7 @@ const Faq = () => {
 
                     <h2 className={"text-2xl text-primary font-bold mb-2"}>Where Are the Forests Located?</h2>
 
-                    <ul className={"text-xl list-disc pl-5 mb-5"}>
+                    <ul className={"list-disc pl-5 mb-5"}>
                         <li className={"mb-2 text-justify"}>Our forests are situated near the following areas:</li>
                         <li className={"mb-2 text-justify"}>
                             Near Elizabethtown, Bladen County, North Carolina.
@@ -61,7 +61,7 @@ const Faq = () => {
 
                     <h2 className={"text-2xl text-primary font-bold mb-2"}>Where Is the Wood Processed?</h2>
 
-                    <ul className={"text-xl list-disc pl-5 mb-5"}>
+                    <ul className={"list-disc pl-5 mb-5"}>
                         <li className={"mb-2 text-justify"}>
                             South Carolina and North Carolina have a well-established forestry industry, with a large number of sawmills located close to the forests for timber processing.
                         </li>
